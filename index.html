@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Redesign</title>
+    <link rel="stylesheet" href="https://use.typekit.net/hbu1pct.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="container" role="main">
+        <section id="introduction" class="section">
+            <div class="hero-heading">
+                <h1>Reimagining Aspara Asian Restaurant</h1>
+            </div>
+
+            <div class="white-box-top" style="margin-bottom: 27px;">
+
+                <p>Aspara Asian Restaurant serves a vast variety of Asian cuisines ranging from Chinese 
+                    to Cambodian. It began as a small food catering business for the Rhode Island community 
+                    and expanded int the brick-and-mortar shop it is today.
+
+                </p>
+
+                <p></p>
+
+                <p> Aspara as an establishment is known for their cozy atmosphere and 
+                    delicious yet reasonably priced dishes. The owners display their 
+                    Cambodian roots proudly through their many menu offerings and colorful decor 
+                    which is why I was taken aback when I first saw their website. The current 
+                    scheme and layout do nothing to show Aspara for what it really is. 
+                    Their food isn't showcased, and the text looks a bit cluttered, 
+                    making this the perfect candidate for a potential redesign.
+                </p>
+
+                <p></p>
+            </div>
+
+            <a href="#part-1" class="scroll-arrow">&#x2B9F;</a>
+        </section>
+
+        <section id="part-1" class="section">
+            <div class="hero-heading">
+                <h2 class="section-subheader">Aspara Asian's Current Website</h2>
+            </div>
+
+            <div class="white-box-actual">
+                <p>
+                    The current website doesn't display any indicator that Aspara is a food based business. 
+                    From first impression I've gathered, the big image of the dancers' hands along with the 
+                    color scheme leads people to believe this is a message parlor as opposed to a restaurant.
+                </p>
+
+                <p></p>
+                <p></p>
+                <p></p>
+
+                    <div>
+                        <img style="width: 100%;" src="images/aspara-original.png">
+                    </div>
+
+                    <div>
+                        <img style="width: 100%;" src="images/aspara-map.png">
+                    </div>
+
+            </div>
+
+
+            <div class="bottom-space"></div>
+
+        </section>
+
+        <section id="part-2" class="section">
+
+            <div class="white-box-actual">
+
+                
+                <p>
+                    The current exterior and interior of Aspara look like this, so I wanted to take inspiration and transfer those vibes into the new redesign.
+                </p>
+
+                <p></p>
+
+                <div class="image-row">
+
+                    <div class="image-container">
+                        <img src="images/inside.jpg" alt="Amazon Default" class="default-img">
+    
+                    </div>
+    
+                    <div class="image-container">
+                        <img src="images/banner.jpg" alt="Sephora Default" class="default-img">
+    
+                    </div>
+    
+                    <div class="bottom-space"></div>
+                </div>
+                <p>
+                    With this in mind, I knew there were a few key details I wanted to highlight in my redesign: <b>emphasis on food</b> and <b>a new color scheme</b> to reflect
+                    a more authentic experience of Aspara as a restaurant.
+                </p>
+
+            </div>
+
+
+            <div class="bottom-space"></div>
+
+        </section>
+
+        <section id="part-2" class="section">
+            <div class="hero-heading">
+                <h2 class="section-subheader">Redesigned Home Page</h2>
+            </div>
+
+            </div>
+
+            <div class="white-box-actual">
+                <div>
+                    <img style="width: 100%;" src="images/redesign-home.png">
+                </div>
+    
+                <div>
+                    <img style="width: 100%;" src="images/redesign-menu.png">
+                </div>
+    
+                <div>
+                    <img style="width: 100%;" src="images/redesign-map.png">
+                </div>
+            </div>
+        </section>
+
+        <div class="transition-text">
+
+            <p>
+                <p><b>Key features included:</b></p>
+    
+                <p></p>
+                <ul style="display: table; margin: 0 auto; text-align: left;">
+                    <li>A <b>Green, Red,</b> and <b>Gold</b> color scheme</li>
+                    <li><b>Menu Preview</b> to showcase more food</li>
+                    <li>An <b>Order Button</b> for quick access</li>
+                    <li><b>Interactive Map</b> to help users locate the restaurant more easily</li>
+                </ul>
+
+                <p><b>Key changes made:</b></p>
+    
+                <p></p>
+                <ul style="display: table; margin: 0 auto; text-align: left;">
+                    <li>Removed most background information (moved to "About" tab)</li>
+                    <li>Made text more emphasized (ex: hours is now much larger)</li>
+                    <li>Removed one of the maps (redundant)</li>
+                    <li>More navbar tabs for better organization</li>
+                </ul>
+    
+
+            </p>
+        </div>
+
+        <section id="part-3" class="section">
+            <div class="hero-heading">
+                <h2 class="section-subheader">Final Reflections</h2>
+            </div>
+
+            <div class="white-box-actual">
+                
+
+
+
+
+
+            </div>
+
+
+            <div class="bottom-space"></div>
+
+
+        </section>
+
+
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const imageContainers = document.querySelectorAll(".image-container");
+
+            imageContainers.forEach(container => {
+                container.addEventListener("click", function () {
+                    this.classList.toggle("flipped");
+                });
+            });
+        });
+    </script>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.navbar ul');
+        const menuItems = document.querySelectorAll('.navbar ul a');
+
+        // Toggle menu on button click or Enter key
+        function toggleMenu(event) {
+            if (event.type === "click" || event.key === "Enter") {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === "true";
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                navLinks.classList.toggle('active');
+            }
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        menuToggle.addEventListener('keydown', toggleMenu); // Allow Enter key to toggle menu
+
+        // Allow pressing Enter to follow links
+        menuItems.forEach(item => {
+            item.addEventListener('keydown', (event) => {
+                if (event.key === "Enter") {
+                    window.location.href = item.getAttribute('href');
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll(".navbar ul li a");
+
+            function highlightNav() {
+                let scrollPosition = window.scrollY;
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop - 100; // Adjust for fixed navbar
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute("id");
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navLinks.forEach((link) => {
+                            link.classList.remove("active");
+                            if (link.getAttribute("href").includes(sectionId)) {
+                                link.classList.add("active");
+                            }
+                        });
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", highlightNav);
+        });
+    </script>
+</body>
+
+</html>
